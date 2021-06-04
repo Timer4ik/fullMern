@@ -61,4 +61,4 @@ class ProdsController {
 
 }
 
-export default new ProdsController
+export default new ProdsController()
