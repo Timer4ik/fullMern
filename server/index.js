@@ -1,6 +1,8 @@
 import express from "express"
 import ProdsRouter from "./routes/prods.route.js"
 import EmployeeRouter from "./routes/employee.route.js"
+import OrdersRouter from "./routes/orders.route.js"
+import OrderProdsRouter from "./routes/orderProds.route.js"
 import cors from "cors"
 import dotenv from "dotenv"
 dotenv.config()
@@ -13,6 +15,8 @@ app.use(cors())
 
 app.use("/api", ProdsRouter)
 app.use("/api", EmployeeRouter)
+app.use("/api", OrdersRouter)
+app.use("/api", OrderProdsRouter)
 
 async function start() {
 	try {
